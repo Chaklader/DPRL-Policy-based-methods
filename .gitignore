@@ -1,6 +1,11 @@
 # Mac OS
 .DS_Store
 
+
+p2_continuous-control/Reacher_1.app/
+p2_continuous-control/Reacher_2.app/
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
