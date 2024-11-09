@@ -2223,7 +2223,7 @@ A^{GAE}_t = ∑γ^k δ_{t+k}
    - Reduced variance in policy gradients
 
 ### 6. Code Structure
-```python
+```textmate
 def compute_gae(rewards, values, gamma, lambda_):
     advantages = []
     gae = 0
@@ -2443,7 +2443,7 @@ Where:
 - More stable learning
 
 ### 3. Implementation Example
-```python
+```textmate
 def soft_update(target_network, main_network, tau=0.001):
     for target_param, main_param in zip(target_network.parameters(), main_network.parameters()):
         target_param.data.copy_(
@@ -2700,6 +2700,7 @@ Where:
 ### 2. Optimization Problem
 
 1. **Objective Function**
+
 ```textmate
 min E[C] + λVar[C]
 ```
@@ -2709,6 +2710,7 @@ Where:
 - λ: risk aversion parameter
 
 2. **Trading Schedule**
+
 ```textmate
 x(t) = x₀ cosh(κ(T-t))/cosh(κT)
 ```
@@ -2734,7 +2736,8 @@ Where:
 ## Practical Implementation
 
 1. **Trading Strategy**
-```python
+
+```textmate
 def optimal_trading_rate(shares_left, time_left, params):
     κ = np.sqrt(params.risk_aversion * params.volatility**2 / params.temp_impact)
     return shares_left * κ * np.tanh(κ * time_left)
@@ -2762,14 +2765,6 @@ def optimal_trading_rate(shares_left, time_left, params):
    - Real-time optimization
 
 Remember: While the model provides elegant mathematical solutions, real-world implementation requires careful parameter estimation and regular recalibration based on market conditions.
-
-
-
-
-
-
-
-
 
 ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
