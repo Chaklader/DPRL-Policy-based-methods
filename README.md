@@ -1,5 +1,3 @@
-
-
 # Continuous Control with DDPG
 
 ## Project Overview
